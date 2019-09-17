@@ -1,0 +1,8 @@
+.DC_Store
+.AppDouble
+.LSoverride
+.vs
+
+
+node_modules/
+app/css/
