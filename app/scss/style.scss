@@ -4,8 +4,10 @@
 
 .header{
     background-image: url(../images/header-bg.jpg);
-    width: 2000px;
-    height: 970px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    min-height: 970px;
     box-sizing: border-box;
     background-color: rgba(36, 36, 36, .1);
     overflow: hidden;
@@ -50,7 +52,27 @@
         font-weight: 400;
         color:#606060;
     }
+    a:after {
+        display: block;
+        content: "";
+        height: 2px;
+        width: 0%;
+        background-color: #000;
+        transition: width .3s step-start;
+    }
 }
+.header__menu a:hover{
+    color: #000;
+    font-weight: 700;
+    line-height: 1;
+    cursor: pointer;
+}
+.header__menu a:hover:after,
+.header__menu a:focus:after {
+    margin: 12px 0 0;
+    width: 100%;
+}
+
 .header__logo{
     padding: 220px 0 0;
     display: flex;
@@ -58,3 +80,313 @@
     align-items: center;
 }
 
+.discography{
+    min-height: 1860px;
+    background-image: url(../images/discography-bg.jpg);
+    background-repeat: no-repeat;
+    background-position: bottom center;
+}
+.discography__inner{
+    padding-top: 150px;
+}
+.discography-title{
+    font-size: 51px;
+    font-family: 'Dosis', sans-serif;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 45px;
+    letter-spacing: 7px;
+}
+.discography-subtitle{
+    text-align: center;
+    font-size: 14px;
+    font-family: 'Open Sans', sans-serif;
+    line-height: 24px;
+    margin: 0 234px 150px ;
+    letter-spacing: 1px;
+}
+.discograph__item{
+    display: inline-block;
+    display: flex;
+    align-items: flex-start;
+}
+.discograph__item-name{
+    min-width: 503px;
+    font-size: 14px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    padding: 18px 24px 0 0;
+    text-transform: uppercase;
+    .year{
+        color: rgba(0, 0, 0, .65);
+    }
+    img{
+        padding: 10px 0;
+    }
+}
+.item-name3{
+    padding-top:32px;
+}
+.discograph__item-title{
+    font-size: 23px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+.discograph__item-text{
+    color: #acacac;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    max-width: 667px;
+    line-height: 24px;
+    margin-bottom: 20px;
+}
+.discograph__item-btn {
+    button{
+        width: 196px;
+        height: 55px;
+        border: none;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 700;
+        font-size: 14px;
+       }
+    .btn1{
+        background-image: url(../images/btn1.jpg);
+        color: #fff;
+        margin-bottom: 111px;
+    }
+    .btn2{
+        background-image: url(../images/btn2.jpg);
+        margin-bottom: 92px;
+    }
+    .btn3{
+        background-image: url(../images/btn3.jpg);
+        margin-top: 95px;
+    }
+}
+ //end discograph
+
+ //start tours
+
+ .tours{
+    padding-top: 165px;
+    height: 1417px;
+    position: relative;
+    background-image: url(../images/tours-bg.jpg);
+    background-repeat: no-repeat;
+    background: cover;
+    background-position: bottom center;
+    &__title{
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 51px;
+        margin-bottom: 57px;
+        font-family: 'Dosis', sans-serif;
+        font-weight: 400;
+        letter-spacing: 6px;
+    }
+    &__text{
+        text-align: center;
+        font-size: 14px;
+        color: $grey2;
+        display: block;
+        max-width: 881px;
+        margin: 0 auto;
+        line-height: 24px;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 400;
+        letter-spacing: 1px;
+    }
+ }
+
+ .tours__item{
+    position: absolute;
+    bottom: 0;
+     &-name{
+         font-size: 14px; 
+         font-family: 'Open Sans', sans-serif;
+         font-weight: 700;
+         text-transform: uppercase;
+         margin-bottom: 80px;
+        .year{
+               color: #2f3c43;
+            }
+        }
+ }
+
+ .tours__item-box{
+     margin-bottom: 245px;
+     font-family: 'Open Sans', sans-serif;
+     font-weight: 400;
+     &-title{
+        font-size: 24px;
+        margin-bottom: 26px;
+     }
+     &-text{
+        font-size: 14px;
+        color: $grey2;
+        max-width: 737px;
+        line-height: 24px;
+        margin-bottom: 37px;
+     }
+     &-btn{
+        border: 1px solid #b3b5b5;
+        cursor: pointer;
+        width: 196px;
+        height: 56px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 700;
+    }
+ }
+
+ .latter{
+     padding-top: 160px;
+     &__title{
+         text-transform: uppercase;
+         font-size: 50px;
+         text-align: center;
+         margin-bottom: 45px;
+         font-family: 'Dosis', sans-serif;
+         font-weight: 400;
+         letter-spacing: 6px;
+     }
+     &__text{
+         color: $grey2;
+         font-size: 14px;
+         line-height: 24px;
+         max-width: 632px;
+         text-align: center;
+         margin: 0 auto;
+         font-family: 'Open Sans', sans-serif;
+         font-weight: 400;
+         letter-spacing: 1px;
+         margin-bottom: 153px;
+     }
+ }
+ .latter__item{
+     max-width: 1204px;
+     height: 423px;
+     display: flex;
+     justify-content: center;
+     margin-bottom: 54px;
+     &-box{
+         max-width: 602px;
+         height: 423px;
+         padding: 30px 30px 35px 35px;
+         background-color: #f5f6f6;
+        }
+    &-name{
+        font-size: 14px;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 700;
+        text-transform: uppercase;
+        margin-bottom: 40px;
+        .year{
+            color: rgba(47, 60, 67, .65);
+        }
+    }
+    &-audioname{
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 400;
+        font-size: 23px;
+        line-height: 24px;
+        margin-bottom: 26px;
+    }
+    &-audiotext{
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 24px;
+        color: $grey2;
+        margin-bottom: 62px;
+    }
+    &-btn{
+        cursor: pointer;
+        border: 1px solid #b5b5b5;
+        width: 196px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 700;
+        height: 56px;
+        &:hover{
+            transition: all .3s;
+            background-color: $grey1;
+        }
+    }
+    &-video{
+        max-width: 602px;
+         height: 423px;
+         width: 100%;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+    }
+ } 
+.slider{
+    background-image: url(../images/slider-bg.jpg);
+    margin: 140px auto 0;
+    background-repeat: no-repeat;
+    background: cover;
+    background-position: center center;
+    width: 2000px;
+    height: 642px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    &__item{
+         color: #fff;    
+         &-title{
+            font-size: 19px;
+            font-family: 'Dosis', sans-serif;
+            font-weight: 400;
+            line-height: 27px;
+            text-transform: uppercase;
+            display: block;
+            width: 900px;
+            margin: 0 auto 35px;
+         }
+         &-text{
+            line-height: 24px;
+            max-width: 560px;
+            margin: 0 auto 60px;
+         }
+         &-text,
+         &-year{
+            font-size: 14px;
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 400;
+            color: $grey2;
+         }
+    }
+    .slick-dots{
+        position: absolute;
+        bottom: 0;
+        margin-bottom: 85px;
+        text-align: center;
+        li{
+            display: inline-block; 
+            margin-left: 38px;
+            &.slick-active{
+                button{
+                   background-color: transparent; 
+                }
+            }
+            button{
+                border-radius: 50%;
+                border: 1px solid #fff;
+                font-size: 0;
+                width: 9px;
+                height: 9px;
+                cursor: pointer;
+                padding: 0;
+            }
+        }
+    }
+}
